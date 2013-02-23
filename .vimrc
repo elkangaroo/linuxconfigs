@@ -18,5 +18,6 @@ syntax on
 filetype plugin indent on
 
 colorscheme dante
+" colorscheme oceandeep
 " colorscheme pablo
 
