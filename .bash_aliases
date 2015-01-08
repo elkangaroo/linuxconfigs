@@ -7,4 +7,4 @@ alias grep="grep --color=auto"
 alias ifconfig="ip addr"
 
 alias matrix='cmatrix'
-alias nyancat='ncat miku.acm.uiuc.edu 23'
+alias nyancat='ncat nyancat.dakko.us 23'
