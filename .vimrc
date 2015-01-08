@@ -5,6 +5,7 @@ execute pathogen#infect()
 set nocompatible
 
 set autoindent " auto indents next new line
+set clipboard=unnamed
 set ignorecase " case-insensitive search
 set incsearch " increment search
 set laststatus=2 " always show the statusline
