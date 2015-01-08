@@ -1,3 +1,7 @@
+" vim-pathogen for plugin management
+runtime bundle/vim-pathogen/autoload/pathogen.vim
+execute pathogen#infect()
+
 set nocompatible
 
 set autoindent " auto indents next new line
