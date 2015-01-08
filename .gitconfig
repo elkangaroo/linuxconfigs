@@ -1,5 +1,10 @@
-[user]
-	name = Alexander Wenzel
-	email = elkangaroo@googlemail.com
+[include]
+	# for credentials
+	path = ~/.gitconfig.local
+[branch]
+	autosetuprebase = always
+[core]
+	autocrlf = input
 [push]
 	default = simple
+
