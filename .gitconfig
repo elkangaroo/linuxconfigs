@@ -5,6 +5,7 @@
 	autosetuprebase = always
 [core]
 	autocrlf = input
+	editor = vim
 [push]
 	default = simple
 
