@@ -8,4 +8,5 @@
 	editor = vim
 [push]
 	default = simple
-
+[alias]
+	up = !git fetch && git rebase --autostash FETCH_HEAD
