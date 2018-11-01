@@ -5,7 +5,7 @@ Just some config files.
 
 ## Requirements
 - GIT 1.8.0+
-- TMUX 1.9+
+- TMUX 2.1+
 
 ## Install/ Update
 ```shell
