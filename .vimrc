@@ -6,6 +6,7 @@ set nocompatible
 
 set autoindent " auto indents next new line
 set clipboard=unnamed
+set hlsearch " highlight all search matches
 set ignorecase " case-insensitive search
 set incsearch " increment search
 set laststatus=2 " always show the statusline
@@ -17,6 +18,9 @@ set showmode " show mode in status line
 set smartcase " uppercase causes case-sensitive search
 set tabstop=2 " tabs appear as #n columns
 set title " show filename in console title
+
+" <Space> turns off search matches highlighting
+:nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
 
 syntax on
 
