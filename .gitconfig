@@ -6,6 +6,8 @@
 [core]
 	autocrlf = input
 	editor = vim
+[status]
+	submodulesummary = 1
 [push]
 	default = simple
 [alias]
