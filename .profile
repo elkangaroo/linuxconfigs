@@ -1,6 +1,5 @@
 #!/bin/bash
 
-export EDITOR="vim"
-export VISUAL="vim"
-export TERM="xterm-256color"
+export EDITOR="nvim"
+export VISUAL="nvim"
 export PATH="$PATH:$HOME/.local/bin:$HOME/bin:."
