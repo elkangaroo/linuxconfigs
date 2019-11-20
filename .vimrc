@@ -39,3 +39,5 @@ nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
 " <t> jump to tag, <C-t> to jump back
 nnoremap t <C-]>
 
+" (commandline) <w><!><!> save files as sudo
+cmap w!! w !sudo tee > /dev/null %
