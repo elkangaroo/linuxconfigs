@@ -12,3 +12,8 @@ bash_prompt() {
   PS3="> "
   PS4="+ "
 }
+
+sync_tmux_env() {
+  export "$(tmux show-environment | grep "^SSH_CONNECTION")"
+  export "$(tmux show-environment | grep "^SSH_AUTH_SOCK")"
+}
