@@ -17,7 +17,13 @@ call plug#begin('~/.vim/plugged')
   Plug 'tpope/vim-sensible'
   Plug 'itchyny/lightline.vim' " lightweight statusline
   Plug 'lumiliet/vim-twig', { 'for': 'twig' } " twig syntax support
+  Plug 'rstacruz/vim-closer' " closes brackets on <Enter>
+  Plug 'preservim/nerdtree' " file system explorer
+  Plug 'justinmk/vim-sneak' " file navigation, jump anywhere with <s><*><*>
 call plug#end()
+
+" activate lables for even faster file navigation
+let g:sneak#label = 1
 
 " => General settings
 """""""""""""""""""""""
@@ -49,6 +55,9 @@ colorscheme dante
 
 " => Key mappings
 """""""""""""""""""
+
+" <C-f> to toggle file system explorer
+nnoremap <C-f> :NERDTreeToggle<CR>
 
 " <Space> turns off search matches highlighting
 nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
