@@ -1,15 +1,3 @@
-[submodule ".vim/bundle/vim-pathogen"]
-	path = .vim/bundle/vim-pathogen
-	url = https://github.com/tpope/vim-pathogen.git
-[submodule ".vim/bundle/vim-sensible"]
-	path = .vim/bundle/vim-sensible
-	url = https://github.com/tpope/vim-sensible.git
-[submodule ".vim/bundle/vim-twig"]
-	path = .vim/bundle/vim-twig
-	url = https://github.com/lumiliet/vim-twig.git
 [submodule ".tmux/plugins/tpm"]
 	path = .tmux/plugins/tpm
 	url = https://github.com/tmux-plugins/tpm.git
-[submodule ".vim/bundle/vim-lightline"]
-	path = .vim/bundle/vim-lightline
-	url = https://github.com/itchyny/lightline.vim
