@@ -14,6 +14,7 @@ bash_prompt() {
 }
 
 sync_tmux_env() {
-  export "$(tmux show-environment | grep "^SSH_CONNECTION")"
-  export "$(tmux show-environment | grep "^SSH_AUTH_SOCK")"
+  if [ -n "${TMUX}" ]; then
+    eval "$(tmux show-environment -s)"
+  fi
 }
