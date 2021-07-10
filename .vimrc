@@ -1,3 +1,24 @@
+" => Plugins
+""""""""""""""
+
+let url_vimplug = 'https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+
+" Install vim-plug if needed
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent execute '!curl -fLo ~/.vim/autoload/plug.vim --create-dirs ' . url_vimplug 
+endif
+
+" Run PlugInstall if missing plugins
+autocmd VimEnter * if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
+  \| PlugInstall --sync | source $MYVIMRC
+\| endif
+
+call plug#begin('~/.vim/plugged')
+  Plug 'tpope/vim-sensible'
+  Plug 'itchyny/lightline.vim' " lightweight statusline
+  Plug 'lumiliet/vim-twig', { 'for': 'twig' } " twig syntax support
+call plug#end()
+
 " => General settings
 """""""""""""""""""""""
 
