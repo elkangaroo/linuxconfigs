@@ -16,14 +16,26 @@ autocmd VimEnter * if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
 call plug#begin('~/.vim/plugged')
   Plug 'tpope/vim-sensible'
   Plug 'itchyny/lightline.vim' " lightweight statusline
-  Plug 'lumiliet/vim-twig', { 'for': 'twig' } " twig syntax support
   Plug 'rstacruz/vim-closer' " closes brackets on <Enter>
   Plug 'preservim/nerdtree' " file system explorer
   Plug 'justinmk/vim-sneak' " file navigation, jump anywhere with <s><*><*>
+  Plug 'airblade/vim-gitgutter' " shows git diff markers
+
+  Plug 'lumiliet/vim-twig', { 'for': 'twig' } " twig syntax support
+  Plug 'rodjek/vim-puppet', { 'for': 'puppet' } " puppet syntax/formatting support
+
+  Plug 'Shougo/neosnippet.vim' " support for code snippets
 call plug#end()
 
-" activate lables for even faster file navigation
+" (vimsneak) activate lables for even faster file navigation
 let g:sneak#label = 1
+
+" (neosnippets) configure code snippets directory
+let g:neosnippet#disable_runtime_snippets = { '_' : 1 }
+let g:neosnippet#snippets_directory='~/.vim/snippets'
+
+" (neosnippets) expanding and jump code snippets with <TAB>
+imap <expr><TAB> neosnippet#expandable_or_jumpable() ? "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
 
 " => General settings
 """""""""""""""""""""""
