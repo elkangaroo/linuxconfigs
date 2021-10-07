@@ -6,7 +6,7 @@ Just some config files.
 ## Requirements
 - GIT 1.8.0+
 - TMUX 2.4+
-- Vim 7.4+
+- Vim 7.4+ or Neovim 0.1.5+
 
 ## Install/ Update
 ```shell
