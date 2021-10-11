@@ -33,7 +33,7 @@ let g:sneak#label = 1
 
 " (neosnippets) configure code snippets directory
 let g:neosnippet#disable_runtime_snippets = { '_' : 1 }
-let g:neosnippet#snippets_directory='~/.vim/snippets'
+let g:neosnippet#snippets_directory = '~/.vim/snippets'
 
 " (neosnippets) expanding and jump code snippets with <TAB>
 imap <expr><TAB> neosnippet#expandable_or_jumpable() ? "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
