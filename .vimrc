@@ -13,6 +13,10 @@ autocmd VimEnter * if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
   \| PlugInstall --sync | source $MYVIMRC
 \| endif
 
+" (polyglot) disable for specific languages; MUST be set before plugin loading
+" - pascal: interferes with puppet *.pp files
+let g:polyglot_disabled = ['pascal']
+
 call plug#begin('~/.vim/plugged')
   Plug 'tpope/vim-sensible'
   Plug 'itchyny/lightline.vim' " lightweight statusline
@@ -20,10 +24,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'preservim/nerdtree' " file system explorer
   Plug 'justinmk/vim-sneak' " file navigation, jump anywhere with <s><*><*>
   Plug 'airblade/vim-gitgutter' " shows git diff markers
-
-  Plug 'lumiliet/vim-twig', { 'for': 'twig' } " twig syntax support
-  Plug 'rodjek/vim-puppet', { 'for': 'puppet' } " puppet syntax/formatting support
-
+  Plug 'sheerun/vim-polyglot' " support syntax/indentation for many languages
   Plug 'Shougo/neosnippet.vim' " support for code snippets
 call plug#end()
 
