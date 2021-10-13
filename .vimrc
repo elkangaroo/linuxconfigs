@@ -15,7 +15,7 @@ autocmd VimEnter * if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
 
 " (polyglot) disable for specific languages; MUST be set before plugin loading
 " - pascal: interferes with puppet *.pp files
-let g:polyglot_disabled = ['pascal']
+let g:polyglot_disabled = [ 'pascal' ]
 
 call plug#begin('~/.vim/plugged')
   Plug 'tpope/vim-sensible'
@@ -31,9 +31,10 @@ call plug#end()
 " (vimsneak) activate lables for even faster file navigation
 let g:sneak#label = 1
 
-" (neosnippets) configure code snippets directory
+" (neosnippets) only use snippets from honza/vim-snippets (snipmate format); disable bundled snippets
 let g:neosnippet#disable_runtime_snippets = { '_' : 1 }
 let g:neosnippet#snippets_directory = '~/.vim/snippets'
+let g:neosnippet#enable_snipmate_compatibility = 1
 
 " (neosnippets) expanding and jump code snippets with <TAB>
 imap <expr><TAB> neosnippet#expandable_or_jumpable() ? "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
@@ -44,18 +45,18 @@ imap <expr><TAB> neosnippet#expandable_or_jumpable() ? "\<Plug>(neosnippet_expan
 set nocompatible
 
 set autoindent " auto indents next new line
-set clipboard=unnamed
+set clipboard = unnamed
 set hlsearch " highlight all search matches
 set ignorecase " case-insensitive search
 set incsearch " increment search
-set laststatus=2 " always show the statusline
+set laststatus = 2 " always show the statusline
 set noshowmode " hide current mode in statusline (replaced by lightline.vim)
 set number " show line numbers
-set scrolloff=3 " always show #n lines above/below current line
-set shiftwidth=2 " #n columns for auto-indenting
+set scrolloff = 3 " always show #n lines above/below current line
+set shiftwidth = 2 " #n columns for auto-indenting
 set showmatch " highlight matching braces
 set smartcase " uppercase causes case-sensitive search
-set tabstop=2 " tabs appear as #n columns
+set tabstop = 2 " tabs appear as #n columns
 set title " show filename in console title
 
 syntax on
