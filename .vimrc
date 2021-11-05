@@ -26,7 +26,11 @@ call plug#begin('~/.vim/plugged')
   Plug 'airblade/vim-gitgutter' " shows git diff markers
   Plug 'sheerun/vim-polyglot' " support syntax/indentation for many languages
   Plug 'Shougo/neosnippet.vim' " support for code snippets
+  Plug 'joshdick/onedark.vim' " color scheme (supporting 16/256/true-color)
 call plug#end()
+
+" (lightline) use onedark color scheme
+let g:lightline = { 'colorscheme': 'onedark' }
 
 " (vimsneak) activate lables for even faster file navigation
 let g:sneak#label = 1
@@ -59,19 +63,24 @@ set smartcase " uppercase causes case-sensitive search
 set tabstop=2 " tabs appear as #n columns
 set title " show filename in console title
 
+if has('termguicolors')
+  set termguicolors
+endif
+
 syntax on
 
 filetype plugin indent on
 
-colorscheme dante
+colorscheme onedark
+" colorscheme dante
 " colorscheme oceandeep
 " colorscheme pablo
 
 " => Key mappings
 """""""""""""""""""
 
-" <C-f> to toggle file system explorer
-nnoremap <C-f> :NERDTreeToggle<CR>
+" <C-f> to open file explorer with current file selected (<q> to close)
+nnoremap <C-f> :NERDTreeFind<CR>
 
 " <Space> turns off search matches highlighting
 nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
