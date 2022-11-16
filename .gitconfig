@@ -1,14 +1,16 @@
 [include]
 	# for credentials
 	path = ~/.gitconfig.local
+[alias]
+	up = !git fetch --prune && git rebase --autostash FETCH_HEAD
 [branch]
 	autosetuprebase = always
 [core]
 	autocrlf = input
 	editor = nvim
+[init]
+	defaultBranch = main
 [status]
 	submodulesummary = 1
 [push]
 	default = simple
-[alias]
-	up = !git fetch --prune && git rebase --autostash FETCH_HEAD

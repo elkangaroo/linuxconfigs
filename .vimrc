@@ -23,10 +23,12 @@ call plug#begin('~/.vim/plugged')
   Plug 'rstacruz/vim-closer' " closes brackets on <Enter>
   Plug 'preservim/nerdtree' " file system explorer
   Plug 'justinmk/vim-sneak' " file navigation, jump anywhere with <s><*><*>
+  Plug 'tpope/vim-fugitive' " wrapper for git
   Plug 'airblade/vim-gitgutter' " shows git diff markers
   Plug 'sheerun/vim-polyglot' " support syntax/indentation for many languages
   Plug 'Shougo/neosnippet.vim' " support for code snippets
   Plug 'joshdick/onedark.vim' " color scheme (supporting 16/256/true-color)
+  Plug 'will133/vim-dirdiff' " recursive directory diff
 call plug#end()
 
 " (lightline) use onedark color scheme
@@ -39,9 +41,16 @@ let g:sneak#label = 1
 let g:neosnippet#disable_runtime_snippets = { '_' : 1 }
 let g:neosnippet#snippets_directory = '~/.vim/snippets'
 let g:neosnippet#enable_snipmate_compatibility = 1
-
 " (neosnippets) expanding and jump code snippets with <TAB>
 imap <expr><TAB> neosnippet#expandable_or_jumpable() ? "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
+
+" (nerdtree) show hidden (.) files by default
+let NERDTreeShowHidden = 1
+" (nerdtree) mirror existing NERDTree on each new tab
+autocmd BufWinEnter * if getcmdwintype() == '' | silent NERDTreeMirror | endif
+
+" enable folding for markdown files
+let g:markdown_folding = 1
 
 " => General settings
 """""""""""""""""""""""
@@ -50,6 +59,7 @@ set nocompatible
 
 set autoindent " auto indents next new line
 set clipboard=unnamed
+set foldlevel=1 " always unfold top-level
 set hlsearch " highlight all search matches
 set ignorecase " case-insensitive search
 set incsearch " increment search
@@ -65,6 +75,10 @@ set title " show filename in console title
 
 if has('termguicolors')
   set termguicolors
+endif
+
+if &term == "screen"
+  set t_Co=256
 endif
 
 syntax on
