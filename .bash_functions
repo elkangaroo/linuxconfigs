@@ -7,7 +7,7 @@ bash_prompt() {
 
   (( UID != 0 )) && local UC=$Y || local UC=$R
 
-  PS1="$M\h$NONE[$UC\u$NONE] \w \$ "
+  PS1="$NONE[$UC\u$NONE] \w \$ "
   PS2="> "
   PS3="> "
   PS4="+ "
