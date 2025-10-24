@@ -1,7 +1,9 @@
 #!/bin/bash
 
-export EDITOR="nvim"
-export VISUAL="nvim"
+if [ -x "$(command -v nvim)" ]; then
+  export EDITOR="nvim"
+  export VISUAL="nvim"
+fi
 
 if [ -d "$HOME/bin" ] ; then
   export PATH="$HOME/bin:$PATH"

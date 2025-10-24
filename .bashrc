@@ -4,6 +4,11 @@
 
 [ -z "$PS1" ] && return
 
+# Start tmux on every graphical shell login
+if [ -n "${DISPLAY}" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "${TMUX}" ]; then
+  exec tmux new -As $USER
+fi
+
 [[ -f /etc/bashrc ]] && . /etc/bashrc
 
 [[ -f ~/.bashrc.local ]] && . ~/.bashrc.local
