@@ -1,0 +1,6 @@
+.git/
+.gitignore
+.gitmodules
+dot.sh
+dot.sh.ignore
+README.md

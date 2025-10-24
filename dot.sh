@@ -27,11 +27,7 @@ fi
 
 git -C $SOURCE submodule update --init
 
-rsync --exclude ".git/" \
-			--exclude ".gitignore" \
-			--exclude ".gitmodules" \
-			--exclude "dot.sh" \
-			--exclude "README.md" \
-			--archive --human-readable --verbose --no-perms $SOURCE/ ~
+rsync --exclude-from "dot.sh.ignore" \
+			--archive --human-readable --verbose --no-perms $SOURCE/ $HOME
 source ~/.bash_profile
 
