@@ -64,6 +64,7 @@ set hlsearch " highlight all search matches
 set ignorecase " case-insensitive search
 set incsearch " increment search
 set laststatus=2 " always show the statusline
+set mouse= " disable mouse support
 set noshowmode " hide current mode in statusline (replaced by lightline.vim)
 set number " show line numbers
 set scrolloff=3 " always show #n lines above/below current line
