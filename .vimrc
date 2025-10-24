@@ -58,7 +58,7 @@ let g:markdown_folding = 1
 set nocompatible
 
 set autoindent " auto indents next new line
-set clipboard=unnamed
+set clipboard^=unnamed,unnamedplus
 set foldlevel=1 " always unfold top-level
 set hlsearch " highlight all search matches
 set ignorecase " case-insensitive search
