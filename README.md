@@ -7,6 +7,7 @@ Just some config files.
 - GIT 1.8.0+
 - TMUX 2.4+
 - Vim 7.4+ or Neovim 0.1.5+
+- [Gitmux](https://github.com/arl/gitmux)
 
 ## Install/ Update
 ```shell
